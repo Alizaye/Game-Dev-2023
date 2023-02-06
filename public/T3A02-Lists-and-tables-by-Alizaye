@@ -1,3 +1,18 @@
 <h5> Version 0.0.2</h5>
 <h1 align=center> T3A02-Lists-and-tables-by-Alizaye</h1>
 <h2> Lists</h2>
+
+<ol> Ordered list of fav foods
+<li> Burgers
+<li> Buttered Chicken
+<li> Salmon
+<li> Chicken
+<li> Double Baked Potatoes
+</ol>
+
+<ul> Unordered list of Countries
+<li> Canada
+<li> France
+<li> USA
+<li> Mexico
+<
