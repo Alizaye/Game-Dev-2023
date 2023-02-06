@@ -15,4 +15,9 @@
 <li> France
 <li> USA
 <li> Mexico
-<
+<li> Europe
+
+<h2> Tables </h2>
+
+<table border=1>
+<tr><td>A</td>
