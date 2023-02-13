@@ -28,16 +28,18 @@ document.getElementById('myB1').style.backgroundColor = 'yellow'
 <textarea style="position: relative; left:0; top:0; width: 200; height :50; ">
 Move this text area
 </textarea><br>
-@keyframes example {
-  from {background-color: red;}
-  to {background-color: yellow;}
-}
+<style> 
 
-/* The element to apply the animation to */
-div {
+  div {
   width: 100px;
   height: 100px;
   background-color: red;
   animation-name: example;
   animation-duration: 4s;
 }
+
+@keyframes example {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
+</style>
