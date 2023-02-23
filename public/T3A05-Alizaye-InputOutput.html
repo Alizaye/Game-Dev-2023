@@ -21,3 +21,27 @@ myIn01 + ' squared = ' + myAnswer
 
 <div id="myDiv01">...</div>
 
+<h4> Extra </h4>
+<input id="myNum02" type=number value="4" ><br>
+<input type=button value="myNumber +5" onclick="{
+                                                    let myIn01 = parseFloat(document.getElementById('myNum02').value)
+let myAnswer = myIn01 + 5
+document.getElementById('myDiv02').innerHTML = 
+myIn01 + ' +5 = ' + myAnswer
+}"><br>
+
+<div id="myDiv02">...</div>
+
+<h4> Super Hard Extra </h4>
+<input id="myNum03" type=number value="4" ><br>
+<input type=button value="Number Above x Number Below" onclick="{
+                                                    let myIn01 = parseFloat(document.getElementById('myNum03').value)
+                                                    let myIn02 = parseFloat(document.getElementById('myNum04').value)
+let myAnswer = myIn01 * myIn02
+document.getElementById('myDiv03').innerHTML = 
+myIn01 + ' x ' myIn02 + ' = ' + myAnswer
+}"><br>
+<input id="myNum04" type=number value="4" ><br>
+
+<div id="myDiv03">...</div>
+
