@@ -1,26 +1,173 @@
-Version 0.0.1
-
 <h2 align=center> T3A08-Loops-Alizaye.html </h2>
 <a href=""> Good reference to Javascript Loops</a><br>
-
-<h4> Example input output code</h4>
-<pre>
-
-</pre>
 
 <h4> Example working code </h4>
 Max loops: <input id="myNum01" type=number value="4" ><br>
 
 <input type=button value="Basic For loop with Decisions" onclick="{
-                                                                  document.getElementById('myDiv01').innerHTML - ''
-                                                                  let myTemp - ''
-                                                                  let myMax = parseInt(document.getElementById('myNum01').value)
-                                                                  for (let myLoop = 0; myLoop < myMax; myLoop++ ){
-                                                                  if (myLoop * 2 > myMax){
-                                                                  myTemp += ' cool '
-                                                                  }
-                                                                  myTemp += 'Loop number: ' + myLoop + '<br>'
-                                                                  }
-                                                                  document.getElementById('myDiv01').innerHTML = myTemp
-                                                                  }">
-<div id-"myDiv01">...</div>
+  document.getElementById('myDiv01').innerHTML = '';
+  let myTemp = '';
+  let myMax = parseInt(document.getElementById('myNum01').value);
+  for (let myLoop = 0; myLoop < myMax; myLoop++ ){
+    if (myLoop * 2 > myMax){
+      myTemp += ' cool ';
+    }
+    myTemp += 'Loop number: ' + myLoop + '<br>';
+  }
+  document.getElementById('myDiv01').innerHTML = myTemp;
+}">
+<div id="myDiv01">...</div>
+
+<h2> Testing Random Css, etc, tricks </h2>
+
+<head>
+	<title>Change Text Color on Click</title>
+	<style>
+		.color-change {
+			color: green;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<p class="color-change" onclick="changeColor(this)">Click this to change color!</p>
+
+	<script>
+		function changeColor(element) {
+			if (element.style.color === 'red') {
+				element.style.color = 'green';
+			} else {
+				element.style.color = 'red';
+			}
+		}
+	</script>
+</body>
+<head>
+	<title>Testing Interesting Animations</title>
+	<style>
+		.flash {
+			animation: flash 0.5s linear infinite;
+		}
+
+		@keyframes flash {
+			0% { opacity: 1; }
+			50% { opacity: 0; }
+			100% { opacity: 1; }
+		}
+	</style>
+</head>
+<body>
+	<p class="flash">Flashing text</p>
+    
+    <head>
+	<title>Testing Interesting Animations</title>
+	<style>
+		.flash1 {
+			animation: flash1 1s linear infinite;
+		}
+
+		@keyframes flash1 {
+			0% { opacity: 1; }
+			50% { opacity: 0; }
+			100% { opacity: 1; }
+		}
+	</style>
+</head>
+<body>
+	<p class="flash1">Slower</p>
+
+<br> <br>
+<h3> Gradient Background </h3>
+<p> -----^</p>
+<html>
+<head>
+	<title>Gradient Background</title>
+	<style>
+		body {
+			background: linear-gradient(to bottom, #00bfff, #87cefa);
+		}
+	</style>
+
+	<title>Checkable Boxes</title>
+	<style>
+		label {
+			display: block;
+			position: relative;
+			padding-left: 35px;
+			margin-bottom: 12px;
+			cursor: pointer;
+			font-size: 22px;
+		}
+
+		input[type="checkbox"] {
+			position: absolute;
+			opacity: 0;
+			cursor: pointer;
+			height: 0;
+			width: 0;
+		}
+
+		.checkmark {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 25px;
+			width: 25px;
+			background-color: #eee;
+		}
+
+		input:checked ~ .checkmark:after {
+			content: "";
+			position: absolute;
+			display: block;
+			left: 9px;
+			top: 5px;
+			width: 5px;
+			height: 10px;
+			border: solid white;
+			border-width: 0 2px 2px 0;
+			transform: rotate(45deg);
+		}
+	</style>
+</head>
+<body>
+	<h1>Things I've learned</h1>
+	<form>
+		<label>
+			<input type="checkbox">
+			<span class="checkmark"></span>
+			Variables
+		</label>
+		<label>
+			<input type="checkbox">
+			<span class="checkmark"></span>
+			Input/Output
+		</label>
+		<label>
+			<input type="checkbox">
+			<span class="checkmark"></span>
+			Decisions
+		</label>
+		<label>
+			<input type="checkbox">
+			<span class="checkmark"></span>
+			Events
+		</label>
+        <label>
+			<input type="checkbox">
+			<span class="checkmark"></span>
+			Functions
+		</label>
+        <label>
+			<input type="checkbox">
+			<span class="checkmark"></span>
+			Loops
+		</label>
+        <label>
+			<input type="checkbox">
+			<span class="checkmark"></span>
+			CSS
+		</label>
+	</form>
+
+
