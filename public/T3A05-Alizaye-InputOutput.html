@@ -45,3 +45,17 @@ document.getElementById('myDiv03').innerHTML = myIn01 + ' x ' + myIn02 + ' = ' +
 
 <div id="myDiv03">...</div>
 
+
+
+<input id="myNum05" type=number value="4" ><br>
+<input type=button value="Number Above Divided By Number Below" onclick="{
+                                                    let myIn01 = parseFloat(document.getElementById('myNum05').value)
+                                                    let myIn02 = parseFloat(document.getElementById('myNum06').value)
+let myAnswer = myIn01 / myIn02
+document.getElementById('myDiv05').innerHTML = myIn01 + ' / ' + myIn02 + ' = ' +
+ myAnswer
+}"><br>
+<input id="myNum06" type=number value="4" ><br>
+
+<div id="myDiv04">...</div>
+
