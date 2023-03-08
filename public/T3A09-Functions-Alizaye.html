@@ -1,9 +1,9 @@
 <script>
   
-  function myExampleFunction(){
-    let myIn01 = parseInt(document.getElementById('myText01').value)
-    let mySum = myInt01 + myIn01
-    let myReply - myIn01 + ' + ' + myIn01 + ' + ' +mySum
+  function myExampleFunction() {
+    let myIn01 = parseInt(document.getElementById('myText01').value);
+    let mySum = myIn01 + myIn01
+    let myReply = myIn01 +  ++myIn01 + mySum
     return myReply
     
   }
@@ -31,3 +31,17 @@ return parseInt(document.getElementById('myText01').value)
 <input type=button value="Function Example" onClick="{
                                                      document.getElementById('myDiv01').innerHTML = myExampleFunction()}">
 <div id="myDiv01">...</div>
+
+
+<br>
+</br>
+<h2>Now I can call the same code below this again and again with only writing myExampleFunction() instead of the entire stream of code.</h2>
+
+<h4> Example working code </h4>
+
+<input type=text id="myText01" value="3"><br>
+
+<input type=button value="Function Example" onClick="{
+                                                     document.getElementById('myDiv03').innerHTML = myExampleFunction()}">
+<div id="myDiv03">...</div>
+
