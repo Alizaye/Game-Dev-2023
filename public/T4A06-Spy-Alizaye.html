@@ -1,3 +1,17 @@
+
+	<script>
+		function encode() {
+			var inputText = document.getElementById("input-text").value;
+			var encodedText = btoa(inputText);
+			document.getElementById("output-text").value = encodedText;
+		}
+
+		function decode() {
+			var encodedText = document.getElementById("output-text").value;
+			var decodedText = atob(encodedText);
+			document.getElementById("input-text").value = decodedText;
+		}
+	</script>
 <h1 align=center>T4A06-Spy-Alizaye.html</h1>
 <textarea id="myArea01" rows=4 cols=70>Hello how are you</textarea><br> 
 
@@ -80,3 +94,21 @@ let myTemp = ''
 
 
 <textarea id="myArea06" rows=4 cols=70></textarea><br> 
+
+<title>Base64 Encoding/Decoding Example</title>
+</head>
+<body>
+	<h1>Base64 Encoding/Decoding Example</h1>
+
+	<form>
+		<label for="input-text">Input Text:</label>
+		<input type="text" id="input-text" name="input-text" />
+
+		<button type="button" onclick="encode()">Encode</button>
+		<button type="button" onclick="decode()">Decode</button>
+	</form>
+
+	<div>
+		<label for="output-text">Output Text:</label>
+		<textarea id="output-text" name="output-text"></textarea>
+	</div>
