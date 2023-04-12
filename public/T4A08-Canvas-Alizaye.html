@@ -56,6 +56,50 @@ You use loops and variables to make fast fancy drawings <br><br>
    myContext.clearRect(0, 0, myCanvas.width, myCanvas.height);
 }"><br><br>
 
+<input type=button value="House" onclick="{
+   myContext.beginPath();
+   myContext.lineWidth = 1;   
+   myContext.moveTo(200,300);
+   myContext.lineTo(200,600);
+   myContext.stroke();
+    myContext.beginPath();
+   myContext.lineWidth = 1;   
+   myContext.moveTo(700,300);
+   myContext.lineTo(700,600);
+   myContext.stroke();
+     myContext.beginPath();
+   myContext.lineWidth = 1;   
+   myContext.moveTo(500,70);
+   myContext.lineTo(700,300);
+   myContext.stroke();
+    myContext.beginPath();
+   myContext.lineWidth = 1;   
+   myContext.moveTo(500,70);
+   myContext.lineTo(200,300);
+   myContext.stroke();
+    myContext.beginPath();
+   myContext.lineWidth = 1;   
+   myContext.moveTo(500,400);
+   myContext.lineTo(500,900);
+   myContext.stroke();
+   myContext.beginPath();
+   myContext.lineWidth = 1;   
+   myContext.moveTo(600,400);
+   myContext.lineTo(600,900);
+   myContext.stroke();
+     myContext.beginPath();
+   myContext.lineWidth = 1;   
+   myContext.moveTo(500,400);
+   myContext.lineTo(600,400);
+   myContext.stroke();
+      myContext.beginPath();
+   myContext.lineWidth = 10;
+   myContext.strokeStyle = 'green';
+   myContext.arc(580, 510, 10, 0, 2 * Math.PI);
+   myContext.stroke();
+   
+}">
+
 <canvas id="myCoolTag" width="1000" height="600" style="border:1px solid #000000;"></canvas>
 
 <script>
