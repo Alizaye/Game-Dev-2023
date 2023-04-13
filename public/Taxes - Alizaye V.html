@@ -1,1 +1,33 @@
 
+<h2 align="center" style="border: 4px solid Red"><b>Taxes</b></h2><br><br>
+<p> 
+Hourly Wage:   <input id="wage" placeholder="$16.65"><br><br>
+Hours Worked:   <input id="hours" placeholder="11"><br><br>
+Tax rate %: <input id="taxRate" placeholder="20"><br><br></p>
+
+<input type="button" value="Go" onclick="{
+ 
+   const wage = document.getElementById('wage').value;
+   const hours = document.getElementById('hours').value;
+   const taxRate = document.getElementById('taxRate').value / 100;
+                                                        
+   const grossPay  = wage * hours;
+   const grossMonthPay = grossPay * 20;
+   const grossYearPay = grossPay * 220;
+   const taxMonth = grossMonthPay * taxRate;
+   const taxYear = grossYearPay * taxRate;
+   const netPayMonth = grossMonthPay - taxMonth;
+   const netPayYear = grossYearPay - taxYear;
+                                                    
+   document.getElementById('dayPay').textContent = 'Daily $' + grossPay;
+   document.getElementById('total').textContent = 'Monthly $' + grossMonthPay + 'Yearly $' + grossYearPay;
+   document.getElementById('tax').textContent = 'Tax monthly $' + taxMonth + ', $' + taxYear + ' per year.';
+   document.getElementById('takeHomePay').textContent = 'Take home pay per month: $' + netPayMonth + ', take home pay per year: $' + netPayYear;                                                  
+}">
+
+<p id="dayPay"></p><br>
+<p id="total"></p>
+<p id="tax"></p>
+<p id="takeHomePay"></p>
+
+<br> Working 20 days a month 220 days per year</p>
