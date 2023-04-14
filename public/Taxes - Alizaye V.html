@@ -1,6 +1,5 @@
-
 <h2 align="center" style="border: 2px solid Red"><b>Taxes</b></h2><br><br> 
-Hourly Wage:   <input id="wage" placeholder="$15"><br>
+Hourly Wage:   <input id="wage" type = number placeholder="15"><br>
 Hours Worked:   <input id="hours" placeholder="8"><br>
 Tax rate %: <input id="taxRate" placeholder="30"><br><br>
 
@@ -9,20 +8,12 @@ Tax rate %: <input id="taxRate" placeholder="30"><br><br>
    const wage = document.getElementById('wage').value;
    const hours = document.getElementById('hours').value;
    const taxRate = document.getElementById('taxRate').value / 100;
-                                                        
-   const grossPay  = wage * hours;
-   const grossMonthPay = grossPay * 20;
-   const grossYearPay = grossPay * 240;
-   const taxMonth = grossMonthPay * taxRate;
-   const taxYear = grossYearPay * taxRate;
-   const netPayMonth = grossMonthPay - taxMonth;
-   const netPayYear = grossYearPay - taxYear;
-                                                    
-   document.getElementById('dayPay').textContent = 'Daily $' + grossPay;
-   document.getElementById('total').textContent = 'Monthly $' + grossMonthPay + 'Yearly $' + grossYearPay;
-   document.getElementById('tax').textContent = 'Tax monthly $' + taxMonth + ', $' + taxYear + ' per year.';
-   document.getElementById('takeHomePay').textContent = 'Take home pay per month: $' + netPayMonth + ', take home pay per year: $' + netPayYear;                                                  
+   let grosspay = wage * hours;
+   let netpay = grosspay - taxRate
+   document.getElementbyId('myDiv').innerHTML = netpay
+                                                     
 }">
+<div id= "myDiv">..</div>
 
 <p id="dayPay"></p><br>
 <p id="total"></p>
