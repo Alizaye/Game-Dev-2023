@@ -24,3 +24,33 @@ Text example: <input id="myText1" type=text size=70 value="" placeholder="Write 
 }"> 
 
 
+
+
+<body onload="{
+   myStorage1 = localStorage.getItem('myStoredNum')
+   if(myStorage  != null){
+      document.getElementById('myNum1').value = myStorage1 
+    }
+}">
+
+<body onunload="{
+   localstorage.setItem('myStoredNum',document.getElementById('myNum1').value)
+}">   
+
+Text example: <input id="myNum1" type=text size=70 value="" placeholder="Write here to store"><br>
+
+<input type="button" value="Store Number" onClick="{
+   localStorage.setItem('myStoredNum', document.getElementById('myNum1').value)
+   alert(document.getElementById('myNum1').value + ' \nHas been stored')
+   document.getElementById('myNum1').value = ''
+}">
+
+<input type="button" value="Retrieve Number" onClick="{
+   document.getElementById('myNum1').value = localStorage.getItem('myStoredNum')
+}"> 
+
+<br>
+<br>
+
+RETRIEVE DIFFERENT NUMBERS OR TEXT, STORE MULTIPLE AND DEFINE WHAT YOU WANT
+
