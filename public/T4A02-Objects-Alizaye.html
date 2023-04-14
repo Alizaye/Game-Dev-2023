@@ -1,24 +1,39 @@
+ 
 Version 0.0.1
-<h2 align=center> T4A02-Variables-by-Alizaye.html</h2>
-<a href=""> You Fix: Good reference to Variables in Javascript and other languages </a> <br>
-Other languages use: bool, int, float, char, string, int_8, int_16 etc <br>
-Note: Javascript does use var and let for local variables. <br>
-For Global variables Mr. Ellis prefers to use document.myVarName
-
-<h4> Example input output code </h4>
+<h2 align=center>t2a02-objects-by-Ali.html</h2>
+<a href="">Good reference to Javascript Objects</a><br>
+Objects are stored named variables
+<h4> Example Objects code</h4>
 <pre>
-let myIn01 = document.getElementById('myText01').value
-document.getElementById('myDiv01').innerHTML=myIn01
+let myPerson
+{
+"firstName": "John",
+"lastName": "Doe",
+"age": 50,
+"eyeColor": "blue"
+}
 </pre>
+<h4>Example working Objects code</h4>
+	<p>Hi: <input type="text" id="myText01" value="type..."></p>
+	<input type="button" value="Example Object Set and Show" onclick="showObjectProperties()">
+	<div id="myDiv1">...</div>
 
-<h4> Example working code </h4>
-<input id ="myText01" type=text value="The dog" > <br>
-<input type=button value="Show Variable" onclick="{
-                                                  let myIn01 = document.getElementById('myText01').value
-                                                  document.getElementById('myDiv01').innerHTML = myIn01
-                                                  }"><br>
-<input type=button value="Using no variable" onclick="{
-                                                      document.getElementById('myDiv01').innerHTML=
-                                                      document.getElementById('myText01').value
-                                                      }"><br>
-<div id="myDiv01">...</div>
+	<script>
+		function showObjectProperties() {
+			let myPerson = {
+				"firstName": "John",
+				"lastName": "Doe",
+				"age": 50,
+				"eyeColor": "blue"
+			};
+			let myText = document.getElementById("myText01").value;
+			let output = "myPerson Object has properties: <br>";
+			output += "firstName: " + myPerson.firstName + "<br>";
+			output += "lastName: " + myPerson.lastName + "<br>";
+			output += "age: " + myPerson.age + "<br>";
+			output += "eyeColor: " + myPerson.eyeColor + "<br>";
+			document.getElementById("myDiv1").innerHTML = output;
+		}
+	</script>
+</body>
+</html>
