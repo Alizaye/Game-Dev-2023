@@ -1,19 +1,31 @@
-<h2 align="center" style="border: 2px solid Red"><b>Taxes</b></h2><br><br> 
-Hourly Wage:   <input id="wage" type = number placeholder="15"><br>
-Hours Worked:   <input id="hours" placeholder="8"><br>
-Tax rate %: <input id="taxRate" placeholder="30"><br><br>
+<h2 align="center" style="border: 2px solid Red"><b>Taxes</b></h2>
+<br>
+Hourly Wage:   <input id="wage" type="number" value="15"><br>
+Hours Worked:   <input id="hours" type="number" value="8"><br>
+Tax rate %: <input id="taxRate" type="number" value="30"><br><br>
 
 <input type="button" value="Go" onclick="{
  
-   const wage = document.getElementById('wage').value;
-   const hours = document.getElementById('hours').value;
-   const taxRate = document.getElementById('taxRate').value / 100;
+   let wage = parseFloat(document.getElementById('wage').value);
+   let hours = parseFloat(document.getElementById('hours').value);
+   let taxRate = parseFloat(document.getElementById('taxRate').value) / 100;
    let grosspay = wage * hours;
-   let netpay = grosspay - taxRate
-   document.getElementbyId('myDiv').innerHTML = netpay
+   let netpay = grosspay - (grosspay * taxRate);
+   let monthpay = netpay * 20;
+   let yearpay = netpay * 240;
+   let moneyded = grosspay * taxRate;
+   document.getElementById('myDiv4').innerHTML = 'Gross pay $' + grosspay;
+   document.getElementById('myDiv').innerHTML = 'Net income $' + netpay;
+   document.getElementById('myDiv5').innerHTML = 'Money deducted $' + moneyded;
+   document.getElementById('myDiv2').innerHTML = 'Monthly pay $' + monthpay;
+   document.getElementById('myDiv3').innerHTML = 'Yearly pay $' + yearpay;
                                                      
 }">
-<div id= "myDiv">..</div>
+<div id="myDiv4">..</div>
+<div id="myDiv">..</div>
+<div id="myDiv5">..</div>
+<div id="myDiv2">..</div>
+<div id="myDiv3">..</div>
 
 <p id="dayPay"></p><br>
 <p id="total"></p>
