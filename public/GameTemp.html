@@ -1,5 +1,7 @@
 <script>
 
+<audio src="ElevatorMusic1" autoplay loop volume="0.7"></audio>
+
    // global variables here
 
    let myGlobalX = 0
@@ -165,7 +167,7 @@ function myCheckHit(){
    
   // you LOSE refresh the page
    if (myScore <= 0){
-    document.all.myText01.value = 'You Lose scrore at zero!'  
+    document.all.myText01.value = 'You Lose score at zero!'  
     alert('Sorry you lose')
     location.reload()
    }
@@ -187,7 +189,8 @@ function myCheckHit(){
 
 
 
-<body id="myBody" style="background-repeat:repeat; background-size: 40%" background="https://upload.wikimedia.org/wikipedia/commons/5/50/Black_colour.jpg"  onkeydown="{
+<body id="myBody" style="background-repeat:repeat; background-size: 40%" background="https://upload.wikimedia.org/wikipedia/commons/5/50/Black_colour.jpg" 
+onkeydown="{
 
    document.all.myText01.value = event.key
 
@@ -278,3 +281,5 @@ function myCheckHit(){
 <img id="myImg26" src="https://image.freepik.com/free-vector/seamless-texture-placing-brown-stone-wall_172107-425.jpg"  style="position:absolute; width:200px; height:10px; left:650px; top:400px;">
 
 <img id="myImg04" src="https://img.itch.zone/aW1hZ2UvNTI0Nzg4LzI3MjU2ODMucG5n/794x1000/imbdbv.png"  style="position:absolute; width:100px; height:80px; left:850px; top:400px;">
+
+
