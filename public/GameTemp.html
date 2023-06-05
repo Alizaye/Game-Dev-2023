@@ -41,12 +41,22 @@ function myCheckHit(){
       document.all.myText01.value = 'You hit myImg05'  
       myScore -= 1
    }   
+   if ( myHitOther('myImg01','myImg12') ){
+      document.getElementById('myImg01').style.left = '20px'
+      document.all.myText01.value = 'You hit myImg12'  
+      myScore -= 1
+   }   
    if ( myHitOther('myImg01','myImg06') ){
       document.getElementById('myImg01').style.left = '20px'
       document.all.myText01.value = 'You hit myImg06'  
       myScore -= 1
    }   
    
+   if ( myHitOther('myImg01','myImg11') ){
+      document.getElementById('myImg01').style.left = '20px'
+      document.all.myText01.value = 'You hit myImg11'  
+      myScore -= 1
+   }   
    if ( myHitOther('myImg01','myImg07') ){
       document.getElementById('myImg01').style.left = '20px'
       document.all.myText01.value = 'You hit myImg07'  
@@ -57,26 +67,15 @@ function myCheckHit(){
       document.all.myText01.value = 'You hit myImg08'  
       myScore -= 1
    }   
+  
    if ( myHitOther('myImg01','myImg09') ){
       document.getElementById('myImg01').style.left = '20px'
       document.all.myText01.value = 'You hit myImg09'  
       myScore -= 1
    }   
-   if ( myHitOther('myImg01','myImg10') ){
-      document.getElementById('myImg01').style.left = '20px'
-      document.all.myText01.value = 'You hit myImg10'  
-      myScore -= 1
-   }   
-   if ( myHitOther('myImg01','myImg11') ){
-      document.getElementById('myImg01').style.left = '20px'
-      document.all.myText01.value = 'You hit myImg11'  
-      myScore -= 1
-   }   
-   if ( myHitOther('myImg01','myImg12') ){
-      document.getElementById('myImg01').style.left = '20px'
-      document.all.myText01.value = 'You hit myImg12'  
-      myScore -= 1
-   }   
+  
+  
+   
    if ( myHitOther('myImg01','myImg013') ){
       document.getElementById('myImg01').style.left = '20px'
       document.all.myText01.value = 'You hit myImg013'  
@@ -230,7 +229,7 @@ function myCheckHit(){
 
 
 
-<img id="myImg01" src="https://yt3.ggpht.com/a/AATXAJxEsylFGycm1y_z1Gw5SS739kV9brSbEmY6MQ=s900-c-k-c0xffffffff-no-rj-mo"  style="position:absolute; width:30px; height:30px; left: 20px; top:100px;">
+<img id="myImg01" src="https://yt3.ggpht.com/a/AATXAJxEsylFGycm1y_z1Gw5SS739kV9brSbEmY6MQ=s900-c-k-c0xffffffff-no-rj-mo"  style="position:absolute; width:20px; height:20px; left: 20px; top:100px;">
 
 
 <img id="myImg02" src="https://image.freepik.com/free-vector/seamless-texture-placing-brown-stone-wall_172107-425.jpg"  style="position:absolute; width:20px; height:400px; left:950px; top:100px;">
@@ -279,4 +278,3 @@ function myCheckHit(){
 <img id="myImg26" src="https://image.freepik.com/free-vector/seamless-texture-placing-brown-stone-wall_172107-425.jpg"  style="position:absolute; width:200px; height:10px; left:650px; top:400px;">
 
 <img id="myImg04" src="https://img.itch.zone/aW1hZ2UvNTI0Nzg4LzI3MjU2ODMucG5n/794x1000/imbdbv.png"  style="position:absolute; width:100px; height:80px; left:850px; top:400px;">
-
