@@ -44,6 +44,14 @@ function myCheckHit(){
       document.all.myText01.value = 'You hit myImg05'  
       myScore -= 1
    }   
+   // YOU WIN and go to next level!
+
+   if ( myHitOther('myImg01','myImg04') ){
+      document.all.myText01.value = 'You hit myImg04 and you win the game!'  
+       alert('You Win, now go to the next level')
+      document.getElementById('myImg01').style.left = '20px'
+      location = 'FINALGAME'
+   }
    if ( myHitOther('myImg01','myImg12') ){
       document.getElementById('myImg01').style.left = '20px'
       document.all.myText01.value = 'You hit myImg12'  
@@ -282,5 +290,7 @@ onkeydown="{
 <img id="myImg26" src="https://image.freepik.com/free-vector/seamless-texture-placing-brown-stone-wall_172107-425.jpg"  style="position:absolute; width:200px; height:10px; left:650px; top:400px;">
 
 <img id="myImg04" src="https://img.itch.zone/aW1hZ2UvNTI0Nzg4LzI3MjU2ODMucG5n/794x1000/imbdbv.png"  style="position:absolute; width:100px; height:80px; left:850px; top:400px;">
+
+
 
 
